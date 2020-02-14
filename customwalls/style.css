@@ -1,91 +1,89 @@
 
-@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+	@import url(https://fonts.googleapis.com/css?family=Montserrat:500);
 
-:root {
-	/* Base font size */
-	font-size: 10px;
-}
+	:root {
+		/* Base font size */
+		font-size: 10px;
+	}
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
 
-body {
-	min-height: 100vh;
-	background: #ff9966;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	body {
+		min-height: 100vh;
+		background: #000000;  /* fallback for old browsers */
 
-}
+	}
 
-.container {
-	max-width: 100rem;
-	margin: 0 auto;
-	padding: 0 2rem 2rem;
-}
+	.container {
+		max-width: 100rem;
+		margin: 0 auto;
+		padding: 0 2rem 2rem;
+	}
 
-.heading {
-	font-family: "Montserrat", Arial, sans-serif;
-	font-size: 4rem;
-	font-weight: 500;
-	line-height: 1.5;
-	text-align: center;
-	padding: 3.5rem 0;
-	color: #1a1a1a;
-}
+	.heading {
+		font-family: "Montserrat", Arial, sans-serif;
+		font-size: 4rem;
+		font-weight: 500;
+		line-height: 1.5;
+		text-align: center;
+		padding: 3.5rem 0;
+		color: #fefefe;
+	}
 
 
 
-.heading span {
-	display: block;
-}
+	.heading span {
+		display: block;
+	}
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	/* Compensate for excess margin on outer gallery flex items */
-	margin: -1rem -1rem;
-}
-
-.gallery-item {
-	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 24rem;
-	
-	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 1rem;
-	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-	border-radius: 25px;
-	overflow: hidden;
-}
-
-.gallery-image {
-	display: block;
-	width: 320px;
-	border-radius: 25px;
-	height: 320px;
-	object-fit: cover;
-	transition: transform 400ms ease-out;
-}
-
-.gallery-image:hover {
-	transform: scale(1.15);
-}
-
-
-
-@supports (display: grid) {
 	.gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		
-		grid-gap: 2rem;
+		display: flex;
+		flex-wrap: wrap;
+		/* Compensate for excess margin on outer gallery flex items */
+		margin: -1rem -1rem;
 	}
 
-	.gallery,
 	.gallery-item {
-		margin: 0;
+		/* Minimum width of 24rem and grow to fit available space */
+		flex: 1 0 24rem;
+		
+		/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+		margin: 1rem;
+		box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+		border-radius: 15px;
+		overflow: hidden;
 	}
-}
+
+	.gallery-image {
+		display: block;
+		width: 320px;
+		border-radius: 15px;
+		height: 500px;
+		object-fit: cover;
+		transition: transform 400ms ease-out;
+	}
+
+	.gallery-image:hover {
+		transform: scale(1.15);
+	}
+
+
+
+	@supports (display: grid) {
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+			
+			grid-gap: 2rem;
+		}
+
+		.gallery,
+		.gallery-item {
+			margin: 0;
+		}
+	}
 
