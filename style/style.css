@@ -14,7 +14,7 @@
 
 body {
 	min-height: 100vh;
-	background-color: #fafafa;
+	background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
 }
 
 
