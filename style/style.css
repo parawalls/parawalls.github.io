@@ -57,9 +57,9 @@ body {
 
 .gallery-image {
 	display: block;
-	width: 320px;
+	width: 100%;
 	border-radius: 25px;
-	height: 320px;
+	height: 100%;
 	object-fit: cover;
 	transition: transform 400ms ease-out;
 }
@@ -73,7 +73,7 @@ body {
 @supports (display: grid) {
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1	fr));
 		
 		grid-gap: 2rem;
 	}
